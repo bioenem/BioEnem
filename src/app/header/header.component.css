@@ -1,0 +1,53 @@
+html{
+  scroll-behavior: smooth;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(/assets/header_bg.png);
+  background-size: cover;
+  height: 15vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+header img{
+  max-height: 14vh;
+  width: 11.3vw;
+  margin-left: 3vw;
+}
+
+.header_right_box{
+  display: flex;
+  margin-right: 3vw;
+  gap: 4vw;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+nav ul{
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 1.225vw;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+nav ul:hover{
+  transition: .5s;
+  text-decoration: underline;
+  color: #91e90e;
+}
+

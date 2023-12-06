@@ -1,0 +1,509 @@
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Open Sans";
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(/assets/header_bg.png);
+  background-size: cover;
+  height: 15vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+header img{
+  max-height: 14vh;
+  width: 11.3vw;
+  margin-left: 3vw;
+}
+
+.header_right_box{
+  display: flex;
+  margin-right: 3vw;
+  gap: 4vw;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+nav ul{
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 1.225vw;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+nav ul:hover{
+  transition: .5s;
+  text-decoration: underline;
+  color: #91e90e;
+}
+
+header button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30.5vw;
+  height: 4vw;
+  border: none;
+  border-radius: 1vw;
+  background-color: #266E00;
+}
+
+header button h1{
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 1vw;
+}
+
+header button i{
+  font-size: 2.5vw;
+  color: rgba(255, 255, 255, 0.5);
+  margin-right: 2vw;
+}
+
+.inicial{
+  background-color: #8FCA39;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicial img{
+  width: 35vw;
+  margin-top: 15vh;
+}
+
+.inicial i{
+  position: absolute;
+  bottom: 4vh;
+  font-size: 2vw;
+  left: 49vw;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  nav ul{
+      font-size: 1.4vw;
+  }
+
+  .inicial img{
+      width: 43vw;
+  }
+
+  header button h1{
+      font-size: 1.35vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav ul{
+      font-size: 1.75vw;
+  }
+
+  .inicial img{
+      width: 55vw;
+  }
+
+  header button h1{
+      font-size: 1.68vw;
+  }
+
+  header button{
+      width: 25vw;
+  }
+}
+
+/* Apresentação */
+
+.apresentacao {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.apresentacao h1{
+  margin-top: 4vw;
+  margin-bottom: 2vw;
+  font-weight: 800;
+  font-size: 3.74vw;
+  text-align: center;
+  text-transform: uppercase;
+  color: #266E00;
+}
+
+.imagens_prod{
+  display: flex;
+  gap: 2vw;
+}
+
+.maria, .vaulecio, .ivan, .leticcia{
+  width: 15.7vw;
+}
+
+.apresentacao p{
+  margin-top: 2vw;
+  margin-bottom: 4vw;
+  width: 66.25vw;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: 1.72vw;
+  text-align: justify;
+  color: #000000;
+}
+
+span{
+  color: #266E00;
+  font-weight: bold;
+}
+
+.absolute_left{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16.8vw;
+}
+
+.absolute_right{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 22.2vw;
+}
+
+@media screen and (max-width: 900px) {
+  .apresentacao h1{
+      font-size: 4.67vw;
+  }
+
+  .maria{
+      width: 24.7vw;
+  }
+
+  .apresentacao p{
+      font-size: 2.15vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .apresentacao h1{
+      font-size: 5.85vw;
+  }
+
+  .maria{
+      width: 30.87vw;
+  }
+
+  .apresentacao p{
+      font-size: 2.687vw;
+  }
+}
+
+/* O que é Biologia? */
+
+.biologia{
+  display: flex;
+  justify-content: center;
+  background-color: #8FCA39;
+}
+
+.biologia_box{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.biologia_box img{
+  margin-right: -6vw;
+  width: 27.6vw;
+  height: 23.36vw;
+}
+
+.left{
+  width: 52.1vw;
+
+}
+
+.biologia h1{
+  margin-top: 7vw;
+  margin-bottom: 2vw;
+  font-weight: 800;
+  font-size: 3.74vw;
+  text-align: left;
+  text-transform: uppercase;
+  color: #266E00;
+}
+
+.biologia p{
+  margin-bottom: 7vw;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: 1.72vw;
+  text-align: justify;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .biologia h1{
+      font-size: 4.67vw;
+  }
+
+  .biologia p{
+      font-size: 2.15vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .biologia h1{
+      font-size: 5.85vw;
+  }
+
+  .biologia p{
+      font-size: 2.687vw;
+  }
+
+  .biologia_box img{
+      display: none;
+  }
+
+  .left{
+      width: 100%;
+  }
+}
+
+/* Biologia no ENEM */
+
+.enem{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.enem h1{
+  margin-top: 4vw;
+  font-weight: 800;
+  font-size: 3.74vw;
+  text-align: center;
+  color: #266E00;
+}
+
+.enem p{
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+  width: 72.65vw;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: 1.72vw;
+  text-align: justify;
+  color: #000000;
+}
+
+@media screen and (max-width: 900px) {
+  .enem h1{
+      font-size: 4.67vw;
+  }
+
+  .enem p{
+      font-size: 2.15vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .enem h1{
+      font-size: 5.85vw;
+  }
+
+  .enem p{
+      font-size: 2.687vw;
+  }
+}
+
+/* Footer */
+
+footer{
+  display: flex;
+  background-color: #266E00;
+  justify-content: space-between;
+  padding: 1vw;
+  align-items: center;
+}
+
+footer img{
+  width: 16vw;
+}
+
+footer p{
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: 1.72vw;
+  color: white;
+}
+
+footer i{
+  margin-right: 0.5vw;
+}
+
+@media screen and (max-width: 900px) {
+  footer img{
+      width: 20vw;
+  }
+
+  footer p{
+      font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  footer img{
+      width: 25vw;
+  }
+
+  footer p{
+      font-size: 2.2vw;
+  }
+}
+
+/* Teste */
+
+.container{
+  background-color: white;
+  width: 90%;
+  display: flex;
+  padding: 20px;
+  margin-bottom: 10vw;
+}
+
+.box{
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  padding: 25px;
+  border: white solid 3px;
+  border-radius: 1vw;
+  flex: 1;
+  transition: 2s;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+
+  position: relative;
+      font-size: 1.3vw;
+      color: white;
+      text-transform: uppercase;
+      text-shadow: 2.41901px 3.22535px 5.64437px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover{
+  flex: 4;
+  font-size: 3vw;
+  border-radius: 1vw;
+}
+
+.card_body{
+  position: absolute;
+  width: 100%;
+  gap: 20%;
+  height: 100%;
+  top: 100%;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  backdrop-filter: brightness(0.5);
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card_body h4{
+  font-size: 2vw;
+}
+
+.card_body button{
+  width: 60%;
+  height: 20%;
+  background-color: #91e90e;
+  color: black;
+  border-radius: 2vw;
+  font-size: 1.2vw;
+  border: none;
+  cursor: pointer;
+}
+
+.box:hover .card_body{
+  top: 0;
+  transition: 2s;
+}
+
+#box1{
+  background-image: url("/assets/card1.png");
+}
+#box2{
+  background-image: url("/assets/card2.png");
+}
+#box3{
+  background-image: url("/assets/card3.png");
+}
+#box4{
+  background-image: url("/assets/card6.png");
+}
+#box5{
+  background-image: url("/assets/card5.png");
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 900px) {
+  .card_body h4{
+      font-size: 2.5vw;
+  }
+
+  .card_body button{
+      font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card_body h4{
+      font-size: 3.12vw;
+  }
+
+  .card_body button{
+      font-size: 1.87vw;
+      width: 65%;
+  }
+}

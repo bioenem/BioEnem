@@ -1,0 +1,161 @@
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Open Sans";
+}
+
+.intro{
+  margin-top: 10vw;
+  margin-bottom: 3vw;
+}
+
+.text{
+  justify-content: center;
+}
+
+.up h1{
+  color: #266E00;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 6.8vw;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.down{
+  margin-top: 5vw;
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+}
+
+.card{
+  height: 48.3vw;
+  width: 39.5vw;
+  border-radius: 31.875px;
+  overflow: hidden;
+  position: relative;
+  background-color: #8FCA39;
+}
+
+.card_img{
+  padding: 2.5vw;
+}
+
+.card_img img{
+  width: 100%;
+  height: 100%;
+}
+
+.card_body{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0px;
+  display: flex;
+  backdrop-filter: brightness(0.5);
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card_body button{
+  width: 80%;
+  height: 10%;
+  margin: auto;
+  background-color: #8FCA39;
+  border-radius: 3vw;
+  text-transform: uppercase;
+  font-size: 2.2vw;
+  color: white;
+  border: none;
+}
+
+.card:hover .card_body{
+  top: 0;
+  transition: 2s;
+}
+
+.practice{
+  background-color: #266E00;
+  padding: 6.25vw;
+}
+
+.practice h1{
+  color: #C9FF93;
+text-align: center;
+font-family: Ubuntu;
+font-size: 8.5vw;
+font-style: normal;
+font-weight: 700;
+line-height: 102.4%; /* 111.85px */
+margin-bottom: 1.5vw;
+}
+
+.practice p{
+  color: #FFF;
+text-align: justify;
+font-family: Ubuntu;
+font-size: 2.18vw;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+width: 86.85%;
+margin: auto;
+}
+
+.question{
+  padding: 6.25vw;
+}
+
+.question .image{
+  width: 80vw;
+  height: 50vw;
+  margin: auto;
+  border: solid 1px;
+}
+
+.enunciado p{
+  text-align: justify;
+  font-size: 1.7vw;
+}
+
+.alternativas p{
+  font-size: 1.7vw;
+  cursor: pointer;
+}
+
+.buttons{
+  display: flex;
+  gap: 2svw;
+  justify-content: end;
+}
+
+.buttons button{
+  background-color: #266E00;
+  width: 17.9vw;
+  height: 4.5vw;
+  color: white;
+  font-size: 2.34vw;
+  text-transform: uppercase;
+  border-radius: 3vw;
+  font-family: 'Open Sans';
+  border: none;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}

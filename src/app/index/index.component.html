@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="./index.component.css">
+    <script src="https://kit.fontawesome.com/6576493062.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <app-header></app-header>
+
+    <section class="inicial">
+        <img src="/assets/imagem.png" alt="">
+        <a href="#apresentacao"><i class="fa-solid fa-chevron-down fa-beat"></i></a>
+    </section>
+
+    <section class="apresentacao" id="apresentacao">
+        <img src="/assets/absolute_left.png" class="absolute_left" alt=""> <!-- Position: absolute -->
+        <h1>Apresentação</h1>
+        <div class="imagens_prod">
+          <img src="/assets/leticcia.png" class="leticcia" alt="">
+          <img src="/assets/vaulecio.png" class="vaulecio" alt="">
+          <img src="/assets/maria.png" class="ivan" alt="">
+          <img src="/assets/maria.png" class="maria" alt="">
+        </div>
+        <p><b>QUEM SOMOS?</b>
+          <br><br>
+           Somos Leticcia Medeiros, Vaulécio Vital, Ivan Carlos e Maria Luíza Oliveira – uma equipe comprometida em fornecer recursos de alta qualidade para estudantes de Biologia. Nossa paixão pela educação e pela ciência nos impulsionou a criar um espaço que vai além dos conceitos básicos, oferecendo uma abordagem inovadora e envolvente para o aprendizado.
+           <br><br>
+           Nosso projeto visa desenvolver uma ferramenta otimizada para os estudos dos pré-vestibulandos. Para isso, contamos com uma plataforma completa de <b>conteúdos práticos da disciplina de biologia</b>, a qual julgamos de extrema importância para a área do conhecimento de ciências da natureza. Além disso, nosso intuito é potencializar habilidades adquiridas no curso <b>técnico em informática</b>, referente à programação para internet, a qual possibilitou a construção do projeto.</p>
+
+            <img src="/assets/absolute_right.png" class="absolute_right" alt=""> <!-- Position: absolute -->
+    </section>
+
+    <section class="biologia" id="biologia">
+        <div class="biologia_box">
+            <div class="left">
+                <h1>O que é Biologia?</h1>
+                <p>In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in <strong>certain</strong> circumstances <span class="verde">and owing</span> to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. </p>
+            </div>
+            <img src="/assets/biologia_img.png" alt="">
+        </div>
+    </section>
+
+    <section class="enem" id="enem">
+        <h1>Biologia no ENEM</h1>
+        <p>Biologia no ENEM está inserida na prova do segunda dia, pois compõe a prova de ciências da natureza. Para cursos como MEDICINA, um bom segundo dia de prova é imprescindível para atingir a nota necessária, uma vez que esta área do conhecimento representa <strong>peso 3 na nota geral.</strong>
+            <br>
+            A seguir, você confere os principais conteúdos de biologia que caem no ENEM, bem como exercícios e vídeo aulas. <span class="verde">BOM ESTUDO!</span></p>
+
+            <div class="container">
+                <div class="box" id="box1">
+                    <div class="card_body">
+                        <h4>Citologia</h4>
+                        <button (click)="navegarParaConteudo()">Acessar conteúdo</button>
+                    </div>
+                </div>
+                <div class="box" id="box2">
+                    <div class="card_body">
+                        <h4>Ecologia</h4>
+                        <button (click)="navegarParaConteudo()">Acessar conteúdo</button>
+                    </div>
+                </div>
+                <div class="box" id="box3">
+                    <div class="card_body">
+                        <h4>Genética</h4>
+                        <button (click)="navegarParaConteudo()">Acessar conteúdo</button>
+                    </div>
+                </div>
+                <div class="box" id="box4">
+                    <div class="card_body">
+                        <h4>Fisiologia Humana</h4>
+                        <button (click)="navegarParaConteudo()">Acessar conteúdo</button>
+
+
+                    </div>
+                </div>
+                <div class="box" id="box5">
+                    <div class="card_body">
+                        <h4>Evolução</h4>
+                        <button (click)="navegarParaConteudo()">Acessar conteúdo</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer>
+        <img src="/assets/logo_footer.png" alt="">
+        <p>@marialuiza0liveira</p>
+        <p><i class="fa-regular fa-copyright"></i>Todos os direitos reservados ao autor</p>
+    </footer>
+
+</body>
+</html>
