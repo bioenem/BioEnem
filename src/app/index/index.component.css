@@ -9,6 +9,8 @@ html{
 }
 
 body{
+  margin: 0;
+  padding: 0;
   width: 100vw;
   min-height: 100vh;
   font-family: "Open Sans";
@@ -366,7 +368,8 @@ footer img{
 footer p{
   font-family: 'Ubuntu';
   font-weight: 300;
-  font-size: 1.72vw;
+  font-size: 1.3vw;
+  margin-right: 3vw;
   color: white;
 }
 

@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 export class IndexComponent {
   constructor(private router: Router) {}
 
-  navegarParaConteudo() {
-    this.router.navigate(['/conteudo']);
-  }
+  navegarParaConteudo(topico: string) {
+    // Navegue para o componente de conteúdo e passe o nome do tópico como parâmetro
+    this.router.navigate(['/conteudo'], { queryParams: { topico: topico } });
+}
 }
