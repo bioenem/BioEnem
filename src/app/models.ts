@@ -1,15 +1,9 @@
-// models.ts
-export interface Alternativa {
-  letra: string;
-  texto: string;
-}
-
 export interface Questao {
-  id: number;
-  enunciado: string;
-  itemA: Alternativa;
-  itemB: Alternativa;
-  itemC: Alternativa;
-  itemD: Alternativa;
-  itemE: Alternativa;
+  Enunciado: string;
+  ItemA: string;
+  ItemB: string;
+  ItemC: string;
+  ItemD: string;
+  ItemE: string;
+  RespostaCerta: string;
 }

@@ -15,7 +15,7 @@ body{
 }
 
 .intro{
-  margin-top: 10vw;
+  margin-top: 5vw;
   margin-bottom: 3vw;
 }
 
@@ -27,7 +27,7 @@ body{
   color: #266E00;
   text-align: center;
   font-family: Open Sans;
-  font-size: 6.8vw;
+  font-size: 5.6vw;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -90,14 +90,14 @@ body{
 
 .practice{
   background-color: #266E00;
-  padding: 6.25vw;
+  padding: 4vw;
 }
 
 .practice h1{
   color: #C9FF93;
 text-align: center;
 font-family: Ubuntu;
-font-size: 8.5vw;
+font-size: 5.5vw;
 font-style: normal;
 font-weight: 700;
 line-height: 102.4%; /* 111.85px */
@@ -108,7 +108,7 @@ margin-bottom: 1.5vw;
   color: #FFF;
 text-align: justify;
 font-family: Ubuntu;
-font-size: 2.18vw;
+font-size: 1.9vw;
 font-style: normal;
 font-weight: 500;
 line-height: normal;

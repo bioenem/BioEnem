@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Questao } from '../models';
 
-interface QuestaoResponse {
+interface QuestoesResponse {
   data: Questao[];
 }
 
@@ -13,12 +13,15 @@ interface QuestaoResponse {
   providedIn: 'root',
 })
 export class QuizService {
-  private apiUrl = 'http://localhost:3000'; // Atualize com a URL do seu servidor
+  private apiUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient) {}
 
-  getQuestoes(conteudo: string): Observable<Questao[]> {
-    return this.http.get<QuestaoResponse>(`${this.apiUrl}/${conteudo}`).pipe(
+  getQuestoesPorConteudo(conteudo: string): Observable<Questao[]> {
+    const url = `${this.apiUrl}/${conteudo}`;
+    console.log('Chamando URL:', url);
+
+    return this.http.get<QuestoesResponse>(url).pipe(
       map(response => response.data)
     );
   }

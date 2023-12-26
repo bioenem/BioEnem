@@ -1,0 +1,61 @@
+.question{
+  padding: 4vw;
+}
+
+.question .image{
+  width: 80vw;
+  margin: auto;
+}
+
+.enunciado p{
+  text-align: justify;
+  font-size: 1.7vw;
+}
+
+.alternativas p{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.7vw;
+}
+
+.buttons{
+  display: flex;
+    margin-top: 2vw;
+    gap: 2vw;
+    justify-content: flex-start;
+}
+
+.buttons button{
+  background-color: #266E00;
+  height: 4.5vw;
+  color: white;
+  padding: 1.1vw;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  border-radius: 3vw;
+  font-family: 'Open Sans';
+  border: none;
+  cursor: pointer;
+}
+
+.alt{
+  width: 6vw !important;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+
+/* Adicione este estilo para destacar a alternativa selecionada */
+.alternativas p.selecionada {
+  background-color: #dff0d8; /* Cor de fundo quando selecionada */
+  padding: 5px;
+}
+
+/* Adicione este estilo para destacar o botão "Confirmar Resposta" */
+.buttons button.selecionado {
+  background-color: #5bc0de; /* Cor de fundo quando selecionado */
+  color: #fff; /* Cor do texto quando selecionado */
+}

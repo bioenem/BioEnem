@@ -33,13 +33,13 @@ export class ConteudoComponent implements OnInit {
           { descricao: 'Acessar mapa mental 4', url: 'https://drive.google.com/file/d/1KAo6PU2jNNkrZNtRjHU0pEKiA3BmSJq7/view?usp=sharing' }
         ];
         break;
-      case 'genetica':
+      case 'genética':
         this.imagens = ['genetica1.png', 'genetica2.png', 'genetica3.png', 'genetica4.png'];
         this.links = [
-          { descricao: 'Acessar mapa mental 1', url: 'https://drive.google.com/file/d/14t2f7OkN5gvGGxV1MLtWs_vqtJiagvxd/view?usp=sharing' },
-          { descricao: 'Acessar mapa mental 2', url: 'https://drive.google.com/file/d/110k-qPxYRjdbKJ3zx8eFjcQY8JkJLbZM/view?usp=sharing' },
-          { descricao: 'Acessar mapa mental 3', url: 'https://drive.google.com/file/d/1DAnvqeS72jvcFV5VLovycYDQigC3N-IV/view?usp=sharing' },
-          { descricao: 'Acessar mapa mental 4', url: 'https://drive.google.com/file/d/1KAo6PU2jNNkrZNtRjHU0pEKiA3BmSJq7/view?usp=sharing' }
+          { descricao: 'Acessar mapa mental 1', url: 'https://drive.google.com/file/d/1Nh_v3_UauuRlwDW5aIZk4nBjXqpJNO8c/view?usp=drivesdk' },
+          { descricao: 'Acessar mapa mental 2', url: 'https://drive.google.com/file/d/1Y7aPhfYdLVYhHWSJVdm63G2o5p0ZKB_y/view?usp=drivesdk' },
+          { descricao: 'Acessar mapa mental 3', url: 'https://drive.google.com/file/d/1y3OelhxbRBTDw2VHDM9Y3vX2VmrFUTXP/view?usp=drivesdk' },
+          { descricao: 'Acessar mapa mental 4', url: 'https://drive.google.com/file/d/1tlRnVX8CzEm5H8YyCwsXzXeq4mC9OfiC/view?usp=drivesdk' }
         ];
         break;
       case 'fisiologia humana':
@@ -51,7 +51,7 @@ export class ConteudoComponent implements OnInit {
           { descricao: 'Acessar mapa mental 4', url: 'https://drive.google.com/file/d/1fN-omxezEiQ7KfEZPBaEa_3IWyGWBni7/view?usp=drive_link' }
         ];
         break;
-      case 'evolucao':
+      case 'evolução':
         this.imagens = ['evolucao1.png', 'evolucao2.png', 'evolucao3.png', 'evolucao4.png'];
         this.links = [
           { descricao: 'Acessar mapa mental 1', url: 'https://drive.google.com/file/d/1Nh_v3_UauuRlwDW5aIZk4nBjXqpJNO8c/view?usp=drivesdk' },

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -9,8 +9,16 @@ import { Router } from '@angular/router';
 export class IndexComponent {
   constructor(private router: Router) {}
 
+  ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0); // Isso rolará a página para o topo
+      }
+    });
+  }
+
   navegarParaConteudo(topico: string) {
-    // Navegue para o componente de conteúdo e passe o nome do tópico como parâmetro
+    // Navegue para a rota /conteudo com o parâmetro topico
     this.router.navigate(['/conteudo'], { queryParams: { topico: topico } });
-}
+  }
 }

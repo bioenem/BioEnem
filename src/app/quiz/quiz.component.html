@@ -1,16 +1,32 @@
-<!-- quiz.component.html -->
-<section class="question">
+<section class="question" *ngIf="questaoAtual" id="quizSectionId">
   <div class="image">
     <div class="enunciado">
-      <!--<p>{{ questao.enunciado }}</p>-->
+      <p>{{ questaoAtual.Enunciado }}</p>
     </div>
     <br /><br />
-    <div class="alternativas">
-      <!--<p><b>{{ alternativa.letra }}</b> {{ alternativa.texto }}</p><br />-->
+
+    <div class="alternativas" *ngIf="!questaoRespondidaa && mostrarAlternativas">
+      <p [ngClass]="{ 'selecionada': isAlternativaSelecionada('A') }"><b>A:</b> {{ questaoAtual.ItemA }}</p><br />
+      <p [ngClass]="{ 'selecionada': isAlternativaSelecionada('B') }"><b>B:</b> {{ questaoAtual.ItemB }}</p><br />
+      <p [ngClass]="{ 'selecionada': isAlternativaSelecionada('C') }"><b>C:</b> {{ questaoAtual.ItemC }}</p><br />
+      <p [ngClass]="{ 'selecionada': isAlternativaSelecionada('D') }"><b>D:</b> {{ questaoAtual.ItemD }}</p><br />
+      <p [ngClass]="{ 'selecionada': isAlternativaSelecionada('E') }"><b>E:</b> {{ questaoAtual.ItemE }}</p><br />
     </div>
+
+    <div *ngIf="mostrarRespostaCerta">
+      <p>Resposta do Gabarito: {{ respostaCerta }}</p>
+    </div>
+
     <div class="buttons">
-      <button>Responder</button>
-      <button>Gabarito</button>
+      <button class="alt" *ngIf="!questaoRespondidaa && mostrarAlternativas" [ngClass]="{ 'selecionado': isAlternativaSelecionada('A') }" (click)="selecionarAlternativa('A')">A</button>
+      <button class="alt" *ngIf="!questaoRespondidaa && mostrarAlternativas" [ngClass]="{ 'selecionado': isAlternativaSelecionada('B') }" (click)="selecionarAlternativa('B')">B</button>
+      <button class="alt" *ngIf="!questaoRespondidaa && mostrarAlternativas" [ngClass]="{ 'selecionado': isAlternativaSelecionada('C') }" (click)="selecionarAlternativa('C')">C</button>
+      <button class="alt" *ngIf="!questaoRespondidaa && mostrarAlternativas" [ngClass]="{ 'selecionado': isAlternativaSelecionada('D') }" (click)="selecionarAlternativa('D')">D</button>
+      <button class="alt" *ngIf="!questaoRespondidaa && mostrarAlternativas" [ngClass]="{ 'selecionado': isAlternativaSelecionada('E') }" (click)="selecionarAlternativa('E')">E</button>
+
+      <button *ngIf="mostrarBotaoConfirmar" (click)="confirmarResposta()">Confirmar Resposta</button>
+      <button *ngIf="mostrarBotaoProximaQuestao" (click)="proximaQuestao()">Próxima Questão</button>
+      <button *ngIf="mostrarBotaoGabarito" (click)="mostrarGabarito()">Gabarito</button>
     </div>
   </div>
 </section>
