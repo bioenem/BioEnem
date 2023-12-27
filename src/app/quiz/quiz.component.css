@@ -7,6 +7,10 @@
   margin: auto;
 }
 
+.enunciado{
+  margin-bottom: -3vw;
+}
+
 .enunciado p{
   text-align: justify;
   font-size: 1.7vw;
@@ -47,15 +51,24 @@ a{
   color: white;
 }
 
-
-/* Adicione este estilo para destacar a alternativa selecionada */
 .alternativas p.selecionada {
-  background-color: #dff0d8; /* Cor de fundo quando selecionada */
+  background-color: #dff0d8;
   padding: 5px;
 }
 
-/* Adicione este estilo para destacar o botão "Confirmar Resposta" */
 .buttons button.selecionado {
-  background-color: #5bc0de; /* Cor de fundo quando selecionado */
-  color: #fff; /* Cor do texto quando selecionado */
+  background-color: #5bc0de;
+  color: #fff;
+}
+
+.resultados h2{
+  font-size: 3vw;
+}
+
+.resultados p{
+  font-size: 2vw;
+}
+
+.mensagem{
+  margin-top: 5vw;
 }

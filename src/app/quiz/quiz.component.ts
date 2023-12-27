@@ -1,4 +1,3 @@
-// quiz.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { QuizService } from '../services/quiz.service';
@@ -23,6 +22,9 @@ export class QuizComponent implements OnInit {
   respostaCerta: string | null = null;
   mostrarBotaoGabarito: boolean = false;
   mostrarRespostaCerta: boolean = false;
+  mostrarBotaoResultado: boolean = false;
+  mostrarResultados: boolean = false;
+  mostrarEnunciado: boolean = true;
 
   constructor(private quizService: QuizService, private route: ActivatedRoute) {}
 
@@ -37,10 +39,9 @@ export class QuizComponent implements OnInit {
     return this.respostaSelecionada === alternativa;
   }
 
-  // Método para tratar a seleção da alternativa
   selecionarAlternativa(alternativa: string): void {
     this.respostaSelecionada = alternativa;
-    this.mostrarBotaoConfirmar = true; // Mostrar o botão "Confirmar Resposta"
+    this.mostrarBotaoConfirmar = true;
   }
 
   obterRespostaCerta(): string {
@@ -78,8 +79,6 @@ export class QuizComponent implements OnInit {
       .replace(/[^\w\s]/gi, c => mapaAcentos[c] || c);
   }
 
-
-
   carregarQuestoes(topico: string) {
     console.log('Carregando todas as questões...');
 
@@ -105,19 +104,12 @@ export class QuizComponent implements OnInit {
     }
   }
 
-
-
-
-
-
-
   responderQuestao(alternativaEscolhida: string) {
     if (!this.questaoAtual) {
       console.error('Nenhuma questão carregada.');
       return;
     }
 
-    // Lógica para verificar se a resposta está correta
     const respostaCorreta = this.questaoAtual.RespostaCerta;
 
     if (alternativaEscolhida === respostaCorreta) {
@@ -132,14 +124,23 @@ export class QuizComponent implements OnInit {
 
   confirmarResposta(): void {
     if (this.respostaSelecionada) {
-      // Lógica para confirmar resposta
       console.log('Resposta confirmada:', this.respostaSelecionada);
       console.log('Resposta certa:', this.obterRespostaCerta());
-      // Reinicie a variável após a confirmação
+
+      if (this.indiceAtual === this.questoes.length - 1) {
+        this.mostrarBotaoResultado = true;
+        this.mostrarBotaoProximaQuestao = false;
+        this.mostrarAlternativas = false;
+      }
+
+      else{
+        this.mostrarBotaoProximaQuestao = true;
+      }
+
+      this.responderQuestao(this.respostaSelecionada);
       this.respostaCerta = this.obterRespostaCerta();
       this.respostaSelecionada = null;
       this.mostrarBotaoConfirmar = false;
-      this.mostrarBotaoProximaQuestao = true;
       this.mostrarBotaoGabarito = true;
       this.mostrarAlternativas = false;
     } else {
@@ -154,10 +155,22 @@ export class QuizComponent implements OnInit {
     this.mostrarRespostaCerta = true;
   }
 
+  mostrarResultado() {
+    console.log('Acertos:', this.acertos);
+    console.log('Erros:', this.erros);
+
+    this.mostrarRespostaCerta = false;
+    this.mostrarResultados = true;
+    this.mostrarEnunciado = false;
+    this.mostrarAlternativas = false;
+  }
+
   proximaQuestao() {
     this.mostrarAlternativas = true;
     this.mostrarBotaoProximaQuestao = false;
     this.questaoRespondidaa = false;
+    this.mostrarRespostaCerta = false;
+    this.mostrarBotaoGabarito = false;
     this.indiceAtual++;
     this.atualizarQuestaoAtual();
 
@@ -175,9 +188,8 @@ export class QuizComponent implements OnInit {
     }
   }
 
-  // Adicione este método à sua classe QuizComponent
-questaoRespondida(): boolean {
-  return this.acertos > 0 || this.erros > 0;
-}
+  questaoRespondida(): boolean {
+    return this.acertos > 0 || this.erros > 0;
+  }
 
 }

@@ -22,7 +22,6 @@ export class ConteudoComponent implements OnInit {
   }
 
   atualizarImagens() {
-    // Lógica para associar o tópico às imagens correspondentes
     switch (this.topico.toLowerCase()) {
       case 'ecologia':
         this.imagens = ['ecologia1.png', 'ecologia2.png', 'ecologia3.png', 'ecologia4.png'];
@@ -69,7 +68,6 @@ export class ConteudoComponent implements OnInit {
           { descricao: 'Acessar mapa mental 4', url: 'https://drive.google.com/file/d/1pS4Hc5AN5ofgWZ-vW5xnizhS0c1blnXn/view?usp=drivesdk' }
         ];
         break;
-      // Adicione mais casos conforme necessário para outros tópicos
       default:
         this.imagens = ['imagem-padrao.png', 'imagem-padrao.png', 'imagem-padrao.png', 'imagem-padrao.png'];
     }

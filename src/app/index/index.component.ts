@@ -12,13 +12,12 @@ export class IndexComponent {
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        window.scrollTo(0, 0); // Isso rolará a página para o topo
+        window.scrollTo(0, 0);
       }
     });
   }
 
   navegarParaConteudo(topico: string) {
-    // Navegue para a rota /conteudo com o parâmetro topico
     this.router.navigate(['/conteudo'], { queryParams: { topico: topico } });
   }
 }

@@ -1,6 +1,6 @@
 <section class="question" *ngIf="questaoAtual" id="quizSectionId">
   <div class="image">
-    <div class="enunciado">
+    <div class="enunciado" *ngIf="mostrarEnunciado">
       <p>{{ questaoAtual.Enunciado }}</p>
     </div>
     <br /><br />
@@ -15,9 +15,10 @@
 
     <div *ngIf="mostrarRespostaCerta">
       <p>Resposta do Gabarito: {{ respostaCerta }}</p>
+      <p>Questão Comentada: Linkdoyoutube.com</p>
     </div>
 
-    <div class="buttons">
+    <div class="buttons" *ngIf="!mostrarResultados">
       <button class="alt" *ngIf="!questaoRespondidaa && mostrarAlternativas" [ngClass]="{ 'selecionado': isAlternativaSelecionada('A') }" (click)="selecionarAlternativa('A')">A</button>
       <button class="alt" *ngIf="!questaoRespondidaa && mostrarAlternativas" [ngClass]="{ 'selecionado': isAlternativaSelecionada('B') }" (click)="selecionarAlternativa('B')">B</button>
       <button class="alt" *ngIf="!questaoRespondidaa && mostrarAlternativas" [ngClass]="{ 'selecionado': isAlternativaSelecionada('C') }" (click)="selecionarAlternativa('C')">C</button>
@@ -27,6 +28,31 @@
       <button *ngIf="mostrarBotaoConfirmar" (click)="confirmarResposta()">Confirmar Resposta</button>
       <button *ngIf="mostrarBotaoProximaQuestao" (click)="proximaQuestao()">Próxima Questão</button>
       <button *ngIf="mostrarBotaoGabarito" (click)="mostrarGabarito()">Gabarito</button>
+      <button *ngIf="mostrarBotaoResultado" (click)="mostrarResultado()">Ver Resultado</button>
+    </div>
+
+    <div class="resultados" *ngIf="mostrarResultados">
+      <div>
+        <h2>Resultados</h2>
+        <p>Acertos: {{ acertos }}</p>
+        <p>Erros: {{ erros }}</p>
+
+        <ng-container *ngIf="acertos <= 5" class="mensagem">
+          <p>Estude mais e tente na próxima vez.</p>
+        </ng-container>
+
+        <ng-container *ngIf="acertos >= 6 && acertos <= 8" class="mensagem">
+          <p>Bom! Você já domina o assunto.</p>
+        </ng-container>
+
+        <ng-container *ngIf="acertos === 9" class="mensagem">
+          <p>Quase lá! Você passa em qualquer prova.</p>
+        </ng-container>
+
+        <ng-container *ngIf="acertos === 10" class="mensagem">
+          <p>Parabéns! Você é um mestre da biologia.</p>
+        </ng-container>
+      </div>
     </div>
   </div>
 </section>
