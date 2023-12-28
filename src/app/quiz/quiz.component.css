@@ -72,3 +72,7 @@ a{
 .mensagem{
   margin-top: 5vw;
 }
+
+.link a{
+  color: blue;
+}

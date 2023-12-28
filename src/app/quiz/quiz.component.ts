@@ -25,6 +25,7 @@ export class QuizComponent implements OnInit {
   mostrarBotaoResultado: boolean = false;
   mostrarResultados: boolean = false;
   mostrarEnunciado: boolean = true;
+  linkResposta: string | null = null;
 
   constructor(private quizService: QuizService, private route: ActivatedRoute) {}
 
@@ -151,6 +152,7 @@ export class QuizComponent implements OnInit {
   mostrarGabarito(): void {
     console.log('Gabarito:', this.obterRespostaCerta());
     this.respostaCerta = this.obterRespostaCerta();
+    this.linkResposta = this.questaoAtual?.LinkResposta || '';
     this.mostrarBotaoGabarito = false;
     this.mostrarRespostaCerta = true;
   }

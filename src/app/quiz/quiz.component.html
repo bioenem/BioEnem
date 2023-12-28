@@ -15,7 +15,7 @@
 
     <div *ngIf="mostrarRespostaCerta">
       <p>Resposta do Gabarito: {{ respostaCerta }}</p>
-      <p>Questão Comentada: Linkdoyoutube.com</p>
+      <p *ngIf="linkResposta" class="link">Link da Resposta: <a href="{{ linkResposta }}" target="_blank">{{ linkResposta }}</a></p>
     </div>
 
     <div class="buttons" *ngIf="!mostrarResultados">

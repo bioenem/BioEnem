@@ -6,4 +6,5 @@ export interface Questao {
   ItemD: string;
   ItemE: string;
   RespostaCerta: string;
+  LinkResposta: string;
 }
